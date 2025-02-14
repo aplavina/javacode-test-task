@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/wallet_V001__initial.sql
+  - include:
+      file: db/changelog/changeset/wallet_V002__insert_wallets.sql
