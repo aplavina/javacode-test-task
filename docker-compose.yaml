@@ -28,9 +28,12 @@ services:
     ports:
       - "8080:8080"
     environment:
+      SPRING_CONFIG_LOCATION: /config/application.yaml
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/postgres
       SPRING_DATASOURCE_USERNAME: user
       SPRING_DATASOURCE_PASSWORD: password
+    volumes:
+      - ./config/application.yaml:/config/application.yaml
     restart: always
 
 volumes:
